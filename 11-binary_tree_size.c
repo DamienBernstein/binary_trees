@@ -6,7 +6,6 @@
  *
  * Return: If the tree is NULL, must return 0
  */
-
 size_t binary_tree_size(const binary_tree_t *tree)
 {
 	size_t size = 0;
@@ -14,8 +13,9 @@ size_t binary_tree_size(const binary_tree_t *tree)
 	if (tree)
 	{
 		size += 1;
-		size += 1 binary_treee_size(tree->left);
-		size += 1 binary_tree_size(tree->right);
+		size += binary_tree_size(tree->left);
+		size += binary_tree_size(tree->right);
+
 	}
 	return (size);
 }
